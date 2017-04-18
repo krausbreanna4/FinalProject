@@ -9,26 +9,10 @@ namespace FinalProject
 {
     public partial class App : Application
     {
-        public App()
+        public static Page GetMainPage()
         {
-            InitializeComponent();
-
-            MainPage = new FinalProject.MainPage();
+            return new MainPage();
         }
 
-        protected override void OnStart()
-        {
-            // Handle when your app starts
-        }
-
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
-
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
-        }
     }
 }
