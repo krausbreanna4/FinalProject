@@ -33,7 +33,7 @@ namespace FinalProject
         void ButtonClicked (object sender, EventArgs args)
         {
             var rnd = new System.Random();
-            output.Text = options[rnd.Next(0, options.Length - 1)];
+            label.Text = options[rnd.Next(0, options.Length - 1)];
         }
 
     }
