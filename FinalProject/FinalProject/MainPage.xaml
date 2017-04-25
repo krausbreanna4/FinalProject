@@ -8,7 +8,8 @@
   <ContentPage.Content>
     <StackLayout>
       <Image Source="{local:ImageResource FinalProject.crystalBallImage.png}"
-             Aspect="AspectFill"/>
+             HorizontalOptions="FillAndExpand" VerticalOptions ="FillAndExpand"/>
+      
       <Label Text ="FORTUNE" Font="Large" HorizontalOptions="Center" VerticalOptions ="CenterAndExpand"/>
       <Button x:Name="Button1" Text="1" HorizontalOptions="Center" VerticalOptions ="CenterAndExpand" Clicked="ButtonClicked"/>
       <Button x:Name="Button2" Text="2" HorizontalOptions="Center" VerticalOptions ="CenterAndExpand" Clicked="ButtonClicked"/>

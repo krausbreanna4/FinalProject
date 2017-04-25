@@ -12,6 +12,7 @@ namespace FinalProject
         public MainPage()
         {
             InitializeComponent();
+            //Content.SizeChanged += OnContentViewSizeChanged; //absolute value
         }
 
         //random fortunes
@@ -38,5 +39,12 @@ namespace FinalProject
             output.Text = options[rnd.Next(0, options.Length - 1)];
         }
 
+        //   void OnContentViewSizeChanged(object sender, EventArgs args)
+        //{
+        //    ContentView Content = (ContentView)sender;
+        //}
+
+      }
+
     }
-}
+
