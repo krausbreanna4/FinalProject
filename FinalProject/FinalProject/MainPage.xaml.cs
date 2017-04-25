@@ -9,7 +9,12 @@ namespace FinalProject
 {
     public partial class MainPage : ContentPage
     {
-        
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        //random fortunes
         string[] options = {
               "A new challenge is near."
                     , "A feather in the hand is better than a bird in the air."
@@ -25,15 +30,12 @@ namespace FinalProject
                     , "A good time to start something new"
         };
 
-        public MainPage()
-        {
-            InitializeComponent();
-        }
+       
         //button click method
-        void ButtonClicked (object sender, EventArgs args)
+        public void ButtonClicked (object sender, EventArgs args)
         {
             var rnd = new System.Random();
-            label.Text = options[rnd.Next(0, options.Length - 1)];
+            output.Text = options[rnd.Next(0, options.Length - 1)];
         }
 
     }
