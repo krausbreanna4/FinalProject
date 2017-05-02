@@ -13,23 +13,32 @@
         <Grid.RowDefinitions> <!--Grid for Rows-->
           <RowDefinition Height="2*" />
           <RowDefinition Height="*" />
+          
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions> <!--Grid for Columns-->
-          <ColumnDefinition Width="Auto" />
           <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+          
         </Grid.ColumnDefinitions>
       
       
-      <ContentView Padding="5" Grid.Row="0" Grid.ColumnSpan="4">
-        <Label Text ="{Binding Output}" Grid.Column="0" Font="Large" HorizontalOptions="Center" VerticalOptions ="CenterAndExpand"/>
+      <ContentView Padding="5" Grid.Row="0" Grid.ColumnSpan="2">
+        <Label Text ="{Binding Output}" Grid.Column="0" Font="Large" HorizontalOptions="CenterAndExpand" VerticalOptions ="CenterAndExpand"/>
         <Label x:Name="output" XAlign="Center"/>
      </ContentView>
         
-      <Button x:Name="Button1" Text="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" Clicked="ButtonClicked"/>
-      <Button x:Name="Button2" Text="2" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="2" Clicked="ButtonClicked"/>
+      <!--<Button x:Name="ButtonRed" Text="Red" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="0" Clicked="Button_OnClick"/>
+      <Button x:Name="ButtonBlue" Text="Blue" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="1" Clicked="Button_OnClick"/>
       
-      <!--<Button x:Name="Button3" Text="3" Grid.Row="2" Grid.ColumSpan="2" Grid.Column="0" Clicked="ButtonClicked"/>
-      <Button x:Name="Button4" Text="4" Grid.Row="2" Grid.ColumnSpan="2" Grid.Column="2" Clicked="ButtonClicked"/>-->
+      <Button x:Name="ButtonGreen" Text="Green" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="0" Clicked="Button_OnClick"/>
+      <Button x:Name="ButtonYellow" Text="Yellow" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Clicked="Button_OnClick"/>-->
+        
+        
+      <Button x:Name="Button1" Text="Red" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="0" Clicked="Button_OnClick"/>
+      <Button x:Name="Button3" Text="Green" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="1" Clicked="Button_OnClick"/>
+      
+      <Button x:Name="Button2" Text="Blue" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="0" Clicked="Button_OnClick"/>
+      <Button x:Name="Button4" Text="Yellow" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Clicked="Button_OnClick"/>
       
     </Grid>
     </StackLayout>

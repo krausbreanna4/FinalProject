@@ -9,6 +9,7 @@ namespace FinalProject
 {
     public partial class MainPage : ContentPage
     {
+        
         public MainPage()
         {
             InitializeComponent();
@@ -31,20 +32,30 @@ namespace FinalProject
                     , "A good time to start something new"
         };
 
-       
-        //button click method
-        public void ButtonClicked (object sender, EventArgs args)
+
+        //button click methods
+
+        private void Button_OnClick(object sender, EventArgs e)
         {
-            var rnd = new System.Random();
-            output.Text = options[rnd.Next(0, options.Length - 1)];
+            Button button = (Button)sender;
+            if (button.Text == "Red" || button.Text == "Blue" || button.Text == "Green" || button.Text == "Yellow")
+            {
+                Button1.Text = "1";
+                Button2.Text = "2";
+                Button3.Text = "3";
+                Button4.Text = "4";
+            }
+            else if (button.Text == "1" || button.Text == "2" || button.Text == "3" || button.Text == "4")
+            {
+                var rnd = new System.Random();
+                output.Text = options[rnd.Next(0, options.Length - 1)];
+            }
+            
         }
 
-        //   void OnContentViewSizeChanged(object sender, EventArgs args)
-        //{
-        //    ContentView Content = (ContentView)sender;
-        //}
+        
 
-      }
+    }
 
     }
 
