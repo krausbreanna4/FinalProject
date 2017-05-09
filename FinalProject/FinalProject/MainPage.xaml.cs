@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Reflection;
 using Xamarin.Forms;
 
 namespace FinalProject
@@ -13,31 +15,24 @@ namespace FinalProject
         public MainPage()
         {
             InitializeComponent();
+
+            var assembly = typeof(MainPage).GetTypeInfo().Assembly;
+            Stream stream = assembly.GetManifestResourceStream("FinalProject.fortune.txt");
+            string text = "";
+            using (var reader = new System.IO.StreamReader(stream))
+            {
+                text = reader.ReadToEnd();
+                options.Add(text);
+            }
+
+
             //Content.SizeChanged += OnContentViewSizeChanged; //absolute value
         }
 
         //random fortunes
-        string[] options = {
-              "A new challenge is near."
-                    , "A feather in the hand is better than a bird in the air."
-                    , "A friend is a present you give yourself."
-                    , "A new pair of shoes will do you a world of good!"
-                    , "The road to riches is paved with homework."
-                    , "Pick another fortune"
-                    , "Ignore all previous fortunes"
-                    , "You will be hungry in one hour."
+        List<string> options = new List<string>();
 
-                    , "Ask your mom."
-                    , "Fortune Not Found: Abort, Retry, Ignore?"
-                    , "A good time to start something new"
-                    , "I find your lack of faith disturbing."
-                    , "It’s a trap!"
-                    , "Do. Or do not. There is no try.”"
-                    , "Your mother was a hamster and your father smelt of elderberries."
-                    , "I fart in your general direction."
-
-        };
-
+       
 
         //button click method
 
@@ -61,7 +56,7 @@ namespace FinalProject
             {
                 
                 var rnd = new System.Random();
-                output.Text = options[rnd.Next(0, options.Length - 1)];
+                output.Text = options[rnd.Next(0, options.Count - 1)];
 
                 Button1.Text = "Red";
                 Button2.Text = "Blue";
