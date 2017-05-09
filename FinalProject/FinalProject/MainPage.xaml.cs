@@ -30,10 +30,16 @@ namespace FinalProject
                     , "Ask your mom."
                     , "Fortune Not Found: Abort, Retry, Ignore?"
                     , "A good time to start something new"
+                    , "I find your lack of faith disturbing."
+                    ,"It’s a trap!"
+                    ,"Do. Or do not. There is no try.”"
+                    ,"Your mother was a hamster and your father smelt of elderberries."
+                    ,"I fart in your general direction."
+                    ,""
         };
 
 
-        //button click methods
+        //button click method
 
         private void Button_OnClick(object sender, EventArgs e)
         {
