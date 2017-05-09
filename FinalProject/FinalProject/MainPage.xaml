@@ -6,7 +6,7 @@
              
              >
   <ContentPage.Content>
-    <StackLayout>
+     <StackLayout>
       <Image Source="{local:ImageResource FinalProject.crystalBallImage.png}"/>
       
       <Grid x:Name="Layout">
@@ -41,5 +41,6 @@
       
     </Grid>
     </StackLayout>
+      
   </ContentPage.Content>
 </ContentPage>
