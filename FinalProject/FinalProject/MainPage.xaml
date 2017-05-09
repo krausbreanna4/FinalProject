@@ -19,14 +19,13 @@
           <ColumnDefinition Width="*" />
           <ColumnDefinition Width="*" />
           
-        </Grid.ColumnDefinitions>
-      
-      
-      <ContentView Padding="5" Grid.Row="0" Grid.ColumnSpan="2">
-        <Label Text ="{Binding Output}" Grid.Column="0" Font="Large" HorizontalOptions="CenterAndExpand" VerticalOptions ="CenterAndExpand"/>
-        <Label x:Name="output" XAlign="Center"/>
-     </ContentView>
-        
+        </Grid.ColumnDefinitions> 
+            
+           
+        <Label x:Name="output" XAlign="Center" TextColor="Red" Grid.Row="0" Grid.ColumnSpan="2"/>
+        <Label x:Name="colorOutput" Text="Pick a Color" XAlign="Center" Grid.Row="1" Grid.ColumnSpan="2"/>
+
+             
       <!--<Button x:Name="ButtonRed" Text="Red" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="0" Clicked="Button_OnClick"/>
       <Button x:Name="ButtonBlue" Text="Blue" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="1" Clicked="Button_OnClick"/>
       
@@ -34,11 +33,11 @@
       <Button x:Name="ButtonYellow" Text="Yellow" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Clicked="Button_OnClick"/>-->
         
         
-      <Button x:Name="Button1" Text="Red" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="0" Clicked="Button_OnClick"/>
-      <Button x:Name="Button3" Text="Green" Grid.Row="1" Grid.ColumnSpan="1" Grid.Column="1" Clicked="Button_OnClick"/>
+      <Button x:Name="Button1" Text="Red" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="0" Clicked="Button_OnClick"/>
+      <Button x:Name="Button3" Text="Green" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Clicked="Button_OnClick"/>
       
-      <Button x:Name="Button2" Text="Blue" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="0" Clicked="Button_OnClick"/>
-      <Button x:Name="Button4" Text="Yellow" Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Clicked="Button_OnClick"/>
+      <Button x:Name="Button2" Text="Blue" Grid.Row="3" Grid.ColumnSpan="1" Grid.Column="0" Clicked="Button_OnClick"/>
+      <Button x:Name="Button4" Text="Yellow" Grid.Row="3" Grid.ColumnSpan="1" Grid.Column="1" Clicked="Button_OnClick"/>
       
     </Grid>
     </StackLayout>
