@@ -21,8 +21,14 @@ namespace FinalProject
             string text = "";
             using (var reader = new System.IO.StreamReader(stream))
             {
-                text = reader.ReadToEnd();
-                options.Add(text);
+                while ((text = reader.ReadLine()) != null)
+                {
+
+                        //text = reader.ReadLine()
+                    options.Add(text);
+                }
+                
+                
             }
 
 
